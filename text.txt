@@ -3,8 +3,10 @@ take input as retirementAge and define and assign as inteagerat scope
 define result,yearOfRetirement, today, currentYear at scope
 create a funclion and name it calculator
     
-    if age and retirementAge is not NaN
-        get current year
+    if age and retirementAge are not NaN
+            get current year
+            if retirementAge or age is equal to zero
+            print "Enter correctly"
             if retirementAge is bigger than age
                 assign result=retirementAge - age 
                 assign yearOfRetirement= number value of currentYear + result

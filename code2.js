@@ -1,4 +1,4 @@
-let age ;
+//let age ;
 let retirementAge;
 let result;
 let yearOfRetirement;
@@ -11,18 +11,21 @@ function calculator(){
     retirementAge=parseInt(document.getElementById("retirement-age").value)
     if(!isNaN(age) && !isNaN(retirementAge)){
         today= new Date();
-        currentYear= today.getFullYear();       
-        if(retirementAge > age){
+        currentYear= today.getFullYear();
+        if(age<=0 || retirementAge<=0){
+            document.getElementById("message").innerHTML="Enter correctly 😎";
+            document.getElementById("result").innerHTML="";
+        }else if(retirementAge > age){
             result=retirementAge-age;
             yearOfRetirement=Number(currentYear)+result;
             document.getElementById("message").innerHTML = "";
             document.getElementById("result").innerHTML= result +" --- "+ yearOfRetirement;
         }else{
-            document.getElementById("result").innerHTML="You are already retired"
+            document.getElementById("result").innerHTML="You are already retired 🥳"
             document.getElementById("message").innerHTML = "";
         }
     }else{
-        document.getElementById("message").innerHTML="Enter correctly";
+        document.getElementById("message").innerHTML="Enter correctly🙏";
         document.getElementById("result").innerHTML="";
     }
 }
